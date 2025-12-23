@@ -28,5 +28,8 @@ public class RestaurantManagementSystem {
         int totald = 0;//Dessert Quantity
 
         double amt =0.0;//Temporary variable to store cost of current item * Quantity
+
+        //------START : Main Program Loop--------
+        
     }
 }
