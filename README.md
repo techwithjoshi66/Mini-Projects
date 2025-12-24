@@ -1,6 +1,7 @@
 # Mini-Project.
 Hey, I am going to use JAVA programming language for my Mini-Projects.
-#Project For Multi Cuisine Restaurant Management System.
+
+# Project For Multi Cuisine Restaurant Management System.
 
 ->Develop a Java Program as Project work to manage and maintain the billing system of a Multi Cuisine Restaurant that serves the customers various food items. The specifications are Listed below.
 
