@@ -30,6 +30,47 @@ public class RestaurantManagementSystem {
         double amt =0.0;//Temporary variable to store cost of current item * Quantity
 
         //------START : Main Program Loop--------
-        
+        do {
+            System.out.println("\n-----------------------------------------------------------");
+            System.out.println("Welcome to the Multi Cuisine Restaurant!!! ");
+            System.out.println("--------------------------------------------------------------");
+            System.out.println("1: Starter Corner");
+            System.out.println("2: Main Course");
+            System.out.println("3: Dessert Corner");
+            System.out.println("E: Enter to print the Bill");
+            System.out.println("---------------------------------------------------------------");
+            System.out.println("Enter Your Choice(1, 2, 3, or E): ");
+            choice1 =  input.next();
+
+            switch(choice1.toUpperCase()){
+                case "1": // Starter Corner
+                    choice = "Y"; // Reset inner loop choice
+
+                    System.out.println("\n--- Welcome to Starter Menu!!!---");
+                    System.out.println("Enter 'VS' for Veg Starter or 'NVS' for Non-Veg Starter: ");
+                    str = input.next();
+
+                    if(str.equalsIgnoreCase("VS")){
+                        System.out.println("\n--- Veg Starter (Price in Rs.)---");
+                        System.out.println("1.Paneer Tikka\t\t\t\t110");
+                        System.out.println("2.Veg Seekh Kabab\t\t\t110");
+                        System.out.println("3.Hara Bhara Kabab\t\t\t110");
+                        System.out.println("4.Shanghai Spring Roll\t\t150");
+                        System.out.println("5.American Corn Ball\t\t150");
+                        System.out.println("6.Crispy American Corn\t\t140");
+                        System.out.println("7.Crispy Baby Corn\t\t\t140");
+                        System.out.println("8.Crispy Mushroom\t\t\t120");
+                        System.out.println("9.Crispy Chilly Potato\t\t120");
+                        System.out.println("10.Crispy Chilly Chana\t\t150");
+
+                        while (choice.equalsIgnoreCase("Y")) {
+                            System.out.println("\n Choose the Veg starter by entering number: ");
+                            vstr = input.nextInt();
+                            System.out.println("Enter the quantity: ");
+                            tvstr = input.nextInt();
+                        }
+                    }
+            }
+        } while (!choice1.equalsIgnoreCase("E"));
     }
 }
