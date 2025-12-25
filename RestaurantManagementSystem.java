@@ -180,8 +180,32 @@ public class RestaurantManagementSystem {
                         System.out.println("11.Chicken Fried Rice\t\t210");
                         System.out.println("12.Kimchi Rice Veg.\t\t\t210");
 
-                        
+                        while (choice.equalsIgnoreCase("Y")){
+                            System.out.println("\nChoose the order by entering number: ");
+                            vfd = input.nextInt();
+                            System.out.println("Enter the quantity: ");
+                            tvfd = input.nextInt();
+
+                            //Calculation for chinese Dishes
+                            amt = 0.0;
+                            if(vfd == 1 || vfd == 9){
+                                amt = tvfd * 240.0;
+                            }else if (vfd == 2 || vfd == 3){
+                                amt = tvfd * 280.0;
+                            }else if (vfd == 4 || vfd == 5 || vfd == 11 || vfd == 12){
+                                amt = tvfd * 210.0;
+                            }else if (vfd == 6 || vfd == 7 || vfd == 8){
+                                amt = tvfd * 190.0;
+                            }else if (vfd == 10){
+                                amt = tvfd * 170.0;
+                            }
+                            tamt1 += amt; //Add to total main course cost
+                            System.out.println("Do you want to place more order? Enter Y/N: ");
+                            choice = input.next();
+                        }
+
                     }
+                    break;
             }
         }
         while (!choice1.equalsIgnoreCase("E"));
