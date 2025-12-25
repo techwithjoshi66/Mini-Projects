@@ -78,7 +78,7 @@ public class RestaurantManagementSystem {
                             }else if (vstr == 6 || vstr == 7){
                                 amt = tvstr * 140.0;
                             }
-                            else if (vstr == 8 || vstr == 9){\
+                            else if (vstr == 8 || vstr == 9){
                                 amt = tvstr *120.0;
                             }
                             tamt += amt;//Add to total starter cost
@@ -95,9 +95,95 @@ public class RestaurantManagementSystem {
                         System.out.println("6.Murg Tandoori\t\t\t\t190");
                         System.out.println("7.Fish Ajwain Tikka\t\t\t190");
                         System.out.println("8.Chilli Chicken\t\t\t160");
-                        System.out.println("");
+                        System.out.println("9.Drums of Heaven\t\t\t180");
+                        System.out.println("10.Shanghal Chicken\t\t\t180");
+
+                        while (choice.equalsIgnoreCase("Y")){
+                            System.out.println("\nChoose the non-veg starter by entering number");
+                            nvd = input.nextInt();
+                            System.out.println("Enter the quantity: ");
+                            tnvstr =input.nextInt();
+
+                            //Calculation for Non-Veg Starters
+                            amt = 0.0;
+                            if(nvd == 1 || nvd == 2){
+                                amt = tnvstr * 170.0;
+                            }else if (nvd == 3 || nvd == 8){
+                                amt = tnvstr * 160.0;
+                            }else if (nvd == 4 || nvd == 9 || nvd == 10){
+                                amt = tnvstr * 180.0;
+                            }else if(nvd >= 5 && nvd <= 7){
+                                amt = tnvstr * 190.0;
+                            }
+                            tamt += amt;//Add to total starter cost
+                            System.out.println("Do you want to place more order? Enter Y/N: ");
+                            choice = input.next();
+                        }
+                    }
+                    break;
+
+                case "2" :
+                    choice = "Y";// Reset inner loop choice
+
+                    System.out.println("\n--- Main Course: Indian and Chinese Dishes! (Price in Rs.) ---");
+                    str = input.next();
+
+                    if(str.equalsIgnoreCase("V")){
+                        System.out.println("\n--- Welcome to Indian Veg Dishes! (Price in Rs.) ---");
+                        System.out.println("1.Shahi Paneer \t\t\t\t180");
+                        System.out.println("2.Navratan Korma\t\t\t180");
+                        System.out.println("3.Kadahi Paneer\t\t\t\t150");
+                        System.out.println("4.Malai Kofta\t\t\t\t150");
+                        System.out.println("5.Kadahi Vegetable\t\t\t140");
+                        System.out.println("6.Vegetable Pakeeza\t\t\t140");
+                        System.out.println("7.Shabnam Curry\t\t\t\t150");
+                        System.out.println("8.Makai Corn Palak\t\t\t150");
+                        System.out.println("9.Veg. Pulao\t\t\t\t110");
+                        System.out.println("10.Kashmiri Pulao\t\t\t140");
+                        System.out.println("11.Butter Naan\t\t\t\t140");
+                        System.out.println("12.Stuffed Kulcha\t\t\t60");
+
+                        while (choice.equalsIgnoreCase("Y")){
+                            System.out.println("\nChoose the order by entering number: ");
+                            vfd = input.nextInt();
+                            System.out.println("Enter the quantity: ");
+                            tvfd = input.nextInt();
+
+                            //Calculation for Indian Non-Veg Dishes
+                            amt = 0.0;
+                            if (vfd == 1 || vfd == 2 || vfd == 9){
+                                amt = tvfd * 180.0;
+                            }else if (vfd ==4 || vfd == 6 || vfd == 12){
+                                amt = tvfd * 150.0;
+                            }else if (vfd == 5 || vfd == 8 || vfd == 10){
+                                amt = tvfd * 190.0;
+                            }else if (vfd == 7){
+                                amt = tvfd * 170.0;
+                            }else if (vfd == 11){
+                                amt = tvfd * 140.0;
+                            }
+                            tamt1 += amt; //Add to total main course cost
+                            System.out.println("Do you want to place more order? Enter Y/N: ");
+                            choice = input.next();
+                        }
+                    }else if (str.equalsIgnoreCase("C")){
+                        System.out.println("1.Schezwan Fried Rice\t\t");
+                        System.out.println("2.Schezwan Chicken\t\t\t280");
+                        System.out.println("3.Chilly Chicken\t\t\t280");
+                        System.out.println("4.Chicken Noodle\t\t\t210");
+                        System.out.println("5.Veg. Hakka Noodle\t\t\t210");
+                        System.out.println("6.Chicken Manchurian\t\t190");
+                        System.out.println("7.Panner Manchurian\t\t190");
+                        System.out.println("8.Chilly Panner\t\t\t\t190");
+                        System.out.println("9.Sanghai Fried Rice\t\t240");
+                        System.out.println("10.Veg. Fried Rice\t\t\t170");
+                        System.out.println("11.Chicken Fried Rice\t\t210");
+                        System.out.println("12.Kimchi Rice Veg.\t\t\t210");
+
+                        
                     }
             }
         }
+        while (!choice1.equalsIgnoreCase("E"));
     }
 }
