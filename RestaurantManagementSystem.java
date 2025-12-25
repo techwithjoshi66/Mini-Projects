@@ -68,9 +68,36 @@ public class RestaurantManagementSystem {
                             vstr = input.nextInt();
                             System.out.println("Enter the quantity: ");
                             tvstr = input.nextInt();
+
+                            //Calculation for Veg Starters
+                            amt = 0.0;
+                            if (vstr >= 1 && vstr <=3){
+                                amt = tvstr * 110.0;
+                            }else if(vstr == 4 || vstr == 5 || vstr == 10) {
+                                amt = tvstr * 150.0;
+                            }else if (vstr == 6 || vstr == 7){
+                                amt = tvstr * 140.0;
+                            }
+                            else if (vstr == 8 || vstr == 9){\
+                                amt = tvstr *120.0;
+                            }
+                            tamt += amt;//Add to total starter cost
+                            System.out.println("Do you want to place more order? Enter Y/N: ");
+                            choice = input.next();
                         }
+                    }else if (str.equalsIgnoreCase("NVS")) {
+                        System.out.println("\n--- Non-Veg Starters (Price in Rs.) ---");
+                        System.out.println("1.Chicken Tikka\t\t\t\t170");
+                        System.out.println("2. Murg Reshmi Kabab\t\t\t170");
+                        System.out.println("3.Murg Chilli Kabab\t\t\t160");
+                        System.out.println("4.Chicken Seekh Kabab\t\t180");
+                        System.out.println("5.Tangdi Kabab\t\t\t\t190");
+                        System.out.println("6.Murg Tandoori\t\t\t\t190");
+                        System.out.println("7.Fish Ajwain Tikka\t\t\t190");
+                        System.out.println("8.Chilli Chicken\t\t\t160");
+                        System.out.println("");
                     }
             }
-        } while (!choice1.equalsIgnoreCase("E"));
+        }
     }
 }
