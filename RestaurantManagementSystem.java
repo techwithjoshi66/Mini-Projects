@@ -206,6 +206,18 @@ public class RestaurantManagementSystem {
 
                     }
                     break;
+
+                case "3" : //Dessert Corner
+                    choice = "Y"; // Reset inner loop choice
+                    
+                System.out.println("\n--- Welcome to Dessert Corner! (Price in Rs) ---");
+                System.out.println("1.Softy Pineapple\t\t\t110");
+                System.out.println("2.Softy Crucnchy Chocolate\t110");
+                System.out.println("3.Chocolate Walnut Brownie\t90");
+                System.out.println("4.Chocolate Doughnut\t\t90");
+                System.out.println("5.Marble Cake\t\t\t\t70");
+                System.out.println("6.Mocha Magic\t\t\t\t90");
+                System.out.println("7.Black ");
             }
         }
         while (!choice1.equalsIgnoreCase("E"));
