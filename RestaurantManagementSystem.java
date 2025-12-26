@@ -6,7 +6,7 @@ public class RestaurantManagementSystem {
         //Initialize variables for total costs
         double tamt = 0.0;//Total cost for Starters
         double tamt1 = 0.0;//Total cost for Main Course
-        double tamt3 = 0.0;//Total cost for Desserts
+        double tamt2 = 0.0;//Total cost for Desserts
 
         double tot = 0.0;//Grand total food cost(tamt + tamt1 + tamt2)
         double gst = 0.0; //Calculated GST 
@@ -217,9 +217,44 @@ public class RestaurantManagementSystem {
                 System.out.println("4.Chocolate Doughnut\t\t90");
                 System.out.println("5.Marble Cake\t\t\t\t70");
                 System.out.println("6.Mocha Magic\t\t\t\t90");
-                System.out.println("7.Black ");
-            }
+                System.out.println("7.Black Forest\t\t\t\t90");
+                System.out.println("8.Mango Shake\t\t\t\t80");
+                System.out.println("9.Pineapple Shake\t\t\t80");
+                System.out.println("10.Tooty Fruity\t\t\t\t120");
+
+                while (choice.equalsIgnoreCase("Y")){
+                    System.out.println("\nChoose the dessert by entering number: ");
+                    d = input.nextInt();
+                    System.out.println("Enter the quantity: ");
+                    totald = input.nextInt();
+
+                    //Calculation for Desserts
+                    amt = 0.0;
+                    if(d == 1 || d == 2) {
+                        amt = totald * 110.0;
+                    }else if (d >= 3 && d <= 4 && d >= 6 && d <= 7){
+                        amt = totald * 90.0;
+                    }else if (d == 5) {
+                        amt = totald * 70.0;
+                    }else if (d == 8 || d == 9){
+                        amt = totald * 80.0;
+                    }else if (d == 10){
+                        amt = totald * 120.0;
+                    }
+                    tamt2 += amt; // Add to total desserts cost
+                    System.out.println("Do you want to place more order? Enter Y/N: ");
+                    choice = input.next();
+                }
+                break;
+
+            case "E" : //Explicitly exit to bill
+                //Fall through to billing section by exiting the do-while loop
+                break;
+            
+            default : //Wrong choice
+                System.out.println("You have entered wrong choice! Please select 1,2,3, or e.");
+                //The loop continues to prompt for choice1 again
+                break;
         }
-        while (!choice1.equalsIgnoreCase("E"));
     }
 }
